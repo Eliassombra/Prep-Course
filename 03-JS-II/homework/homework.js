@@ -8,6 +8,8 @@ function obtenerMayor(x, y) {
   if (x > y) {return x}
     else if (x < y) {return y}
       else if (x === y) {return x,y}
+  if (x < y) {return y}
+  if (x === y) {return x,y}
 }
 
 function mayoriaDeEdad(edad) {
@@ -16,6 +18,7 @@ function mayoriaDeEdad(edad) {
   //Si es menor, devolver --> "Not allowed"
   if (edad >= 18) {return "Allowed"}
     else if (edad < 18) {return "Not allowed"}
+  if (edad < 18) {return "Not allowed"}
 }
   
 function conection(status) {
@@ -27,6 +30,8 @@ function conection(status) {
   if (status === 1) {return "Online"}
     else if (status === 2) {return "Away"}
       else {return "Offline"}
+  if (status === 2) {return "Away"}
+  else {return "Offline"}
 }
 
 function saludo(idioma) {
@@ -40,6 +45,10 @@ function saludo(idioma) {
     else if (idioma === "mandarin") {return "Ni Hao!"}
       else if (idioma === "ingles") {return "Hello!"}
         else {return "Hola!"}
+  if (idioma === "aleman") {return "Guten Tag!"};
+  if (idioma === "mandarin") {return "Ni Hao!"}
+  if (idioma === "ingles") {return "Hello!"}
+  {return "Hola!"};
 }
 
 function colors(color) {
@@ -55,6 +64,10 @@ function colors(color) {
       else if (color === "green") {return "This is green"}
         else if (color === "orange") {return "This is orange"}
           else {return "Color not found"}
+  if (color === "red") {return "This is red"}
+  if (color === "green") {return "This is green"}
+  if (color === "orange") {return "This is orange"}
+  else {return "Color not found"}
 }
 
 function esDiezOCinco(numero) {
@@ -62,6 +75,8 @@ function esDiezOCinco(numero) {
   // De lo contrario, devuelve "false"
   // Tu código:
   if (numero === 10 || numero === 5) {return true}
+  if (numero === 10) {return true}
+  if (numero === 5) {return true}
   else {return false}
 }
 
@@ -70,6 +85,7 @@ function estaEnRango(numero) {
   // De lo contrario, devuelve "false"
   // Tu código:
   if (numero < 50 && numero > 20) {return true}
+  if (numero < 50 &&  numero > 20) {return true}
     else {return false}
 }
 
@@ -82,6 +98,7 @@ function esEntero(numero) {
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
   if (numero % 1 === 0) {return true}
+  if (numero % 1 === 0){return true}
     else {return false}
 }
 
@@ -94,6 +111,10 @@ function fizzBuzz(numero) {
     else if (numero % 3 === 0) {return "fizz"}
      else if (numero % 5 === 0) {return "buzz"}
       else {return numero}
+   if (numero % 3 === 0 && numero % 5 === 0) {return "fizzbuzz"}
+   if (numero % 3 === 0) {return "fizz"}
+   if (numero % 5 === 0) {return "buzz"}
+   else {return numero}
 }
 
 function operadoresLogicos(num1, num2, num3) {
@@ -108,6 +129,11 @@ function operadoresLogicos(num1, num2, num3) {
       else if (num1 > num2 && num1 > num3 && num1 > 0) {return "Número 1 es mayor y positivo"}
         else if (num3 > num1 && num3 > num2) {return num3 + 1}
           else return false 
+  if (num1 < 0 || num2 < 0 || num3 < 0) {return "Hay negativos"}
+  else if (num1 === 0 || num2 === 0 || num3 === 0) {return "Error"}
+  else if (num3 > num1 && num3 > num2) {return num3 + 1}
+  else if (num1 > num2 && num1 > num3 && num1 > 0) {return "Número 1 es mayor y positivo"}
+    else {return false}
 }
 
 function esPrimo(numero) {
@@ -128,6 +154,7 @@ function esVerdadero(valor){
   //Escribe tu código aquí
   if (valor === true) {return "Soy verdadero"}
   else if (valor === false) {return "Soy falso"}  
+    else if (valor === false) {return "Soy falso"}
 }
 
 function tablaDelSeis(){
@@ -144,6 +171,7 @@ function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
    if (numero > 99 && numero < 1000) return true;
+  if (numero > 99 && numero < 1000) return true;
     else return false;
 }
 
@@ -151,14 +179,14 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
-  let contador = 0;
+  let contador = 8
+  let resultado = 0
   do {
-    numero += 5;
-    contador++;
-  }while(contador < 8);
-  return numero;
+    resultado += 5
+    contador -= 1
+  } while (contador !== 0);
+  return numero + resultado;
 }
-
 
 // No modificar nada debajo de esta línea
 // --------------------------------

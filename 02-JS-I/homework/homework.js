@@ -29,8 +29,7 @@ const nuevoModulo = 21 % 5 === 1;
 function devolverString(str) {
   // "Return" la string provista: str
   // Tu código: 
-  
-return str;
+  return str
 }
 
 function suma(x, y) {
@@ -38,7 +37,6 @@ function suma(x, y) {
   // Suma "x" e "y" juntos y devuelve el valor
   // Tu código:
   return x + y;
-
 }
 
 function resta(x, y) {
@@ -65,7 +63,10 @@ function sonIguales(x, y) {
   // Tu código:
 if (x === y) {return true}
   else {return false}
-
+  if (x ===y)
+    return true
+  else (x != y)
+  return false
 }
 
 function tienenMismaLongitud(str1, str2) {
@@ -73,6 +74,7 @@ function tienenMismaLongitud(str1, str2) {
   // De lo contrario, devuelve "false"
   // Tu código:
   if (str1.length === str2.length) {return true}
+   if (str1.length === str2.length) {return true}
     else {return false}
 }
 
@@ -159,6 +161,9 @@ function esPositivo(numero) {
   if (numero > 0) {return "Es positivo"}
   else if (numero < 0) {return "Es negativo"}
   else if (numero === 0) {return false}
+  if (numero > 0) {return "Es positivo"};
+  if (numero < 0) {return "Es negativo"};
+  if (numero ===0) { return false};
 }
 
 function agregarSimboloExclamacion(str) {
@@ -200,7 +205,6 @@ function areaDelTriangulo(base, altura){
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
   return base * altura / 2;
-
 }
 
 
@@ -208,7 +212,7 @@ function deEuroAdolar(euro){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
-  return euro * 1.20 ;
+  return euro * 1.20;
 }
 
 
@@ -218,11 +222,10 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  if (letra.length > 1) {return "Dato incorrecto"}
   if (letra === "a" || letra === "e" || letra === "i" || letra ==="o" || letra === "u") {return "Es vocal"}
   if (letra !== "a" || letra !== "e" || letra !== "i" || letra !== "o" || letra !== "u") {return "Dato incorrecto"}
+    if (letra.length > 1) {return "Dato incorrecto"}
 }
-
 
 
 // No modificar nada debajo de esta línea
